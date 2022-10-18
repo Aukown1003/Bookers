@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   def index
     # book.new定義しないとerr。要確認
     @book = Book.new
-    @books = Book.all
+    @books = Book.all.order(id: :asc)
   end
 
   def show
