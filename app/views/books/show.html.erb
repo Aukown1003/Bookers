@@ -3,3 +3,7 @@
 
 <h2>Body</h2>
 <label><%= @book.body %></label>
+
+<%= link_to "edit", edit_book_path(@book.id) %>
+<a href ="/books">back</a>
+<!--< %= link_to("back", "/books") %>-->
