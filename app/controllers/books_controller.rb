@@ -25,16 +25,21 @@ class BooksController < ApplicationController
   end
 
   def update
-    book = Book.find(params[:id])
-    book.update(book_params)
-    flash[:notice] = "Update successfully"
-    redirect_to book_path(book.id)
+    # book =Book.find~以降全てbookで記述時も問題なく動いていた、なぜ？
+    @book = Book.find(params[:id])
+    if @book.update(book_params)
+     flash[:notice] = "Update successfully"
+     redirect_to book_path(@book.id)
+    else
+      render :edit
+    end
   end
 
 
   def destroy
     book = Book.find(params[:id])
     book.destroy
+    flash[:notice] = "Destroy successfully"
     redirect_to '/books'
   end
 

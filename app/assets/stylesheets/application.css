@@ -22,3 +22,17 @@
    line-height: 18px;
    margin: 33px;
  }
+ 
+.errors_box{
+ width: 450px;
+ background-color: #c0c0c0;
+ margin-bottom: 20px;
+}
+
+.errors_box h2{
+ font-size: 12px;
+ padding: 5px 5px 5px 25px;
+ text-align: left;
+ background-color: #ff0000;
+ color: #fff
+}
