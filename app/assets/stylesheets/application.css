@@ -36,3 +36,7 @@
  background-color: #ff0000;
  color: #fff
 }
+
+.errors_box li{
+ padding-bottom: 10px;
+}
