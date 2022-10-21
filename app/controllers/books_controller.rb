@@ -1,6 +1,5 @@
 class BooksController < ApplicationController
   def index
-    # book.new定義しないとerr。要確認
     @book = Book.new
     @books = Book.all.order(id: :asc)
   end
@@ -25,7 +24,6 @@ class BooksController < ApplicationController
   end
 
   def update
-    # book =Book.find~以降全てbookで記述時も問題なく動いていた、なぜ？
     @book = Book.find(params[:id])
     if @book.update(book_params)
      flash[:notice] = "Update successfully"
